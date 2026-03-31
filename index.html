@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Rajeshwar Singh | Portfolio</title>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    
+    <!-- FontAwesome added for official social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+            extend: {
+                colors: {
+                "surface-container-lowest": "#0c0e11",
+                "secondary-container": "#11505a",
+                "surface-container-highest": "#333538",
+                "on-tertiary-container": "#6f5500",
+                "inverse-primary": "#006875",
+                "tertiary-fixed-dim": "#f3bf26",
+                "on-primary-fixed-variant": "#004f58",
+                "on-primary-container": "#00626e",
+                "primary-container": "#00e5ff",
+                "surface": "#111316",
+                "on-tertiary-fixed": "#251a00",
+                "on-background": "#e2e2e6",
+                "error": "#ffb4ab",
+                "surface-bright": "#37393d",
+                "tertiary": "#ffeac0",
+                "on-secondary": "#00363d",
+                "on-surface": "#e2e2e6",
+                "error-container": "#93000a",
+                "on-surface-variant": "#bac9cc",
+                "surface-container": "#1e2023",
+                "background": "#111316",
+                "on-secondary-fixed-variant": "#0d4e57",
+                "surface-container-low": "#1a1c1f",
+                "primary": "#c3f5ff",
+                "on-secondary-container": "#8ac1cc",
+                "primary-fixed": "#9cf0ff",
+                "on-tertiary-fixed-variant": "#594400",
+                "tertiary-container": "#fec931",
+                "inverse-surface": "#e2e2e6",
+                "primary-fixed-dim": "#00daf3",
+                "secondary": "#98d0da",
+                "outline-variant": "#3b494c",
+                "outline": "#849396",
+                "surface-variant": "#333538",
+                "inverse-on-surface": "#2f3034",
+                "on-secondary-fixed": "#001f24",
+                "surface-dim": "#111316",
+                "on-error": "#690005",
+                "surface-container-high": "#282a2d",
+                "on-primary-fixed": "#001f24",
+                "on-primary": "#00363d",
+                "on-error-container": "#ffdad6",
+                "tertiary-fixed": "#ffdf96",
+                "secondary-fixed": "#b3ecf7",
+                "on-tertiary": "#3e2e00",
+                "secondary-fixed-dim": "#98d0da",
+                "surface-tint": "#00daf3"
+                },
+                fontFamily: {
+                "headline": ["Space Grotesk"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+                },
+                borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+            },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-shift-no-border {
+            border: none !important;
+        }
+        .glass-morphism {
+            background: rgba(17, 19, 22, 0.7);
+            backdrop-filter: blur(20px);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at 50% 50%, rgba(0, 229, 255, 0.08) 0%, transparent 70%);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #c3f5ff 0%, #00e5ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .btn-primary-gradient {
+            background: linear-gradient(135deg, #c3f5ff 0%, #00e5ff 100%);
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container">
+
+    <!-- TopAppBar -->
+    <header class="fixed top-0 w-full z-50 bg-[#111316]/70 backdrop-blur-xl dark:bg-[#111316]/70 tonal-shift-no-border">
+        <nav class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+            <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-cyan-400 text-2xl" data-icon="architecture">architecture</span>
+                <span class="text-xl font-bold tracking-widest text-cyan-400 font-['Space_Grotesk'] uppercase">RAJESHWAR Singh</span>
+            </div>
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex items-center space-x-8 font-['Space_Grotesk'] tracking-tight uppercase text-sm">
+                <a class="text-cyan-400 border-b-2 border-cyan-400 pb-1" href="#">Home</a>
+                <a class="text-slate-400 hover:text-cyan-200 transition-colors" href="#about">About</a>
+                <a class="text-slate-400 hover:text-cyan-200 transition-colors" href="#skills">Skills</a>
+                <a class="text-slate-400 hover:text-cyan-200 transition-colors" href="#projects">Projects</a>
+                <a class="text-slate-400 hover:text-cyan-200 transition-colors" href="#experience">Experience</a>
+                <a class="text-slate-400 hover:text-cyan-200 transition-colors" href="#contact">Contact</a>
+            </div>
+            <!-- Mobile Menu Toggle (Placeholder) -->
+            <button class="md:hidden text-on-surface">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex items-center pt-24 pb-20 overflow-hidden hero-gradient">
+            <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 items-center relative z-10 w-full">
+                <!-- Text Content -->
+                <div class="order-2 md:order-1 md:col-span-7 lg:col-span-8 space-y-8">
+                    <div class="inline-block px-4 py-1.5 rounded-full bg-surface-container-high text-primary-fixed text-xs font-semibold tracking-widest uppercase mb-4">
+                        Anand International College of Engineering
+                    </div>
+                    <h1 class="font-headline text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-gradient">
+                        Bridging the Gap Between Code, Hardware, and Leadership.
+                    </h1>
+                    <p class="text-lg md:text-xl text-on-surface-variant max-w-2xl font-light leading-relaxed">
+                        I am a 3rd-year B.Tech student, Student Council President, and SIH Finalist, blending software development, mechanical innovation, and strategic marketing to solve complex, real-world problems.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <a class="btn-primary-gradient px-8 py-4 rounded-xl text-on-primary font-bold tracking-wide hover:opacity-90 transition-all scale-100 active:scale-95" href="#projects">
+                            View My Work
+                        </a>
+                        <a class="px-8 py-4 rounded-xl bg-surface-container-high text-primary font-bold tracking-wide hover:bg-surface-container-highest transition-all border border-outline-variant/20" href="#contact">
+                            Contact Me
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Profile Image -->
+                <div class="order-1 md:order-2 md:col-span-5 lg:col-span-4 flex justify-center">
+                    <div class="relative group">
+                        <div class="absolute -inset-0.5 bg-gradient-to-tr from-cyan-400 to-primary-container rounded-full blur opacity-30 group-hover:opacity-60 transition duration-1000 group-hover:duration-200"></div>
+                        <div class="relative w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-surface-container-high ring-4 ring-primary/10 shadow-2xl">
+                            <img src="assets/images/RAORAJ.jpg" alt="Rajeshwar Singh Profile" class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-500">
+                        </div>
+                        <!-- Floating badge or accent -->
+                        <div class="absolute -bottom-2 -right-2 bg-surface-container-highest border border-primary/20 px-4 py-2 rounded-xl backdrop-blur-md hidden md:block z-20">
+                            <div class="flex items-center gap-2">
+                                <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                                <span class="text-[10px] font-bold tracking-widest uppercase text-cyan-400">Available for Innovation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Decorative Element -->
+            <div class="absolute right-[-10%] top-[20%] w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] items-center"></div>
+        </section>
+
+        <!-- About Section -->
+        <section class="py-32 bg-surface-container-low" id="about">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-20 items-center">
+                    <div class="relative group">
+                        <div class="aspect-square rounded-none overflow-hidden bg-surface-container-highest relative">
+                            <img alt="Technical engineering workspace" class="w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-80 transition-all duration-700" data-alt="industrial engineering workspace with blueprints, digital tablets, and mechanical components under moody atmospheric lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1hItbFPgo5kOvRfYuD5qTwLPlriRpEvSZJYIiFSswhEzebd3E5ljkm3FQe0k_2CNmADDGZ39lKUDyXjFaz7q1F7z4DGgVBPGiEdnj0FwpTUYvi6SPoDLxJtdoENIelor9a1t3LIdJhh_38rymQFx3_XCPuqCjhRoyC-cB5TcXaQTaoJDxrDv3GUfKym1WRsWI3OYYWqWY2FqNtid6AuzLbWfHUsbVHzpHXucBKzSU-g3fx2tJGZqngBwX4bvyxiBw1R8piisffBo"/>
+                            <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent"></div>
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-primary-container/20 backdrop-blur-xl border border-primary/20 flex flex-col items-center justify-center p-4 text-center">
+                            <span class="text-primary font-headline text-4xl font-bold italic">3rd</span>
+                            <span class="text-on-surface-variant text-xs font-bold tracking-widest mt-1 uppercase">Year</span>
+                        </div>
+                    </div>
+                    <div class="space-y-8">
+                        <h2 class="font-headline text-4xl md:text-5xl font-bold text-on-surface">Innovative Engineer, <span class="text-primary-fixed-dim">Strategic Leader.</span></h2>
+                        <div class="space-y-6 text-on-surface-variant leading-loose text-lg text-justify">
+                            <p>
+                                I don't just write code; I build solutions. From developing eco-friendly materials and assembling motor vehicles to leading student bodies and driving marketing initiatives in the Admission Cell, my cross-disciplinary approach allows me to tackle challenges from multiple angles.
+                            </p>
+                            <p>
+                                I believe the best innovations happen at the intersection of technology, engineering, and human connection. My journey is defined by a relentless pursuit of practical, sustainable, and scalable solutions that bridge the gap between digital logic and physical reality.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Bento Grid -->
+        <section class="py-32 bg-surface" id="skills">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="mb-20">
+                    <h2 class="font-headline text-3xl md:text-4xl font-bold mb-4">Core Competencies</h2>
+                    <div class="w-20 h-1 bg-primary-container"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Software Card -->
+                    <div class="bg-surface-container-low p-10 rounded-xl hover:bg-surface-container-high transition-all duration-300 group">
+                        <div class="w-14 h-14 rounded-xl bg-secondary-container/30 flex items-center justify-center mb-8 group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+                            <span class="material-symbols-outlined text-3xl" data-icon="terminal">terminal</span>
+                        </div>
+                        <h3 class="font-headline text-2xl font-bold mb-6">Software &amp; AI</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-surface-bright text-xs font-medium rounded-full text-on-surface-variant">C</span>
+                            <span class="px-3 py-1 bg-surface-bright text-xs font-medium rounded-full text-on-surface-variant">C++</span>
+                            <span class="px-3 py-1 bg-surface-bright text-xs font-medium rounded-full text-on-surface-variant">Python</span>
+                            <span class="px-3 py-1 bg-surface-bright text-xs font-medium rounded-full text-on-surface-variant">MySQL</span>
+                            <span class="px-3 py-1 bg-surface-bright text-xs font-medium rounded-full text-on-surface-variant">Prompt Engineering</span>
+                            <span class="px-3 py-1 bg-surface-bright text-xs font-medium rounded-full text-on-surface-variant">AI Enthusiast</span>
+                        </div>
+                    </div>
+                    <!-- Hardware Card -->
+                    <div class="bg-surface-container-low p-10 rounded-xl hover:bg-surface-container-high transition-all duration-300 group">
+                        <div class="w-14 h-14 rounded-xl bg-secondary-container/30 flex items-center justify-center mb-8 group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+                            <span class="material-symbols-outlined text-3xl" data-icon="settings_wrench">reset_wrench</span>
+                        </div>
+                        <h3 class="font-headline text-2xl font-bold mb-6">Hardware &amp; Engineering</h3>
+                        <p class="text-on-surface-variant text-sm mb-6 leading-relaxed">
+                            Specializing in Civil/Environmental sustainability and Mechanical hands-on assembly.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-3 text-sm text-on-surface">
+                                <span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Eco-friendly Bricks from Waste
+                            </li>
+                            <li class="flex items-center gap-3 text-sm text-on-surface">
+                                <span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Motor Vehicle Assembly
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Business Card -->
+                    <div class="bg-surface-container-low p-10 rounded-xl hover:bg-surface-container-high transition-all duration-300 group">
+                        <div class="w-14 h-14 rounded-xl bg-secondary-container/30 flex items-center justify-center mb-8 group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+                            <span class="material-symbols-outlined text-3xl" data-icon="leaderboard">leaderboard</span>
+                        </div>
+                        <h3 class="font-headline text-2xl font-bold mb-6">Business &amp; Leadership</h3>
+                        <p class="text-on-surface-variant text-sm mb-6 leading-relaxed">
+                            Strategic marketing and organizational management at institutional scales.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="bg-surface-bright/50 p-4 rounded-lg">
+                                <p class="text-xs uppercase tracking-widest text-primary mb-1">President</p>
+                                <p class="text-sm font-semibold">Student Council</p>
+                            </div>
+                            <div class="bg-surface-bright/50 p-4 rounded-lg">
+                                <p class="text-xs uppercase tracking-widest text-primary mb-1">Marketing</p>
+                                <p class="text-sm font-semibold">Admission Cell Strategy</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Leadership Timeline -->
+        <section class="py-32 bg-surface-container-low" id="experience">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex flex-col md:flex-row gap-20">
+                    <div class="md:w-1/3">
+                        <h2 class="font-headline text-4xl font-bold sticky top-32">Leadership &amp; Experience</h2>
+                        <p class="mt-6 text-on-surface-variant">Fostering technical culture and driving institutional growth through strategic initiatives.</p>
+                    </div>
+                    <div class="md:w-2/3 relative">
+                        <!-- Timeline Line -->
+                        <div class="absolute left-0 md:left-8 top-0 h-full w-[2px] bg-outline-variant/20"></div>
+                        <div class="space-y-20">
+                            <!-- Experience 1 -->
+                            <div class="relative pl-8 md:pl-20">
+                                <div class="absolute left-[-5px] md:left-6.5 top-2 w-3 h-3 rounded-full bg-primary-fixed-dim shadow-[0_0_15px_rgba(0,218,243,0.5)]"></div>
+                                <span class="text-xs font-headline tracking-[0.2em] text-primary uppercase mb-2 block">Present</span>
+                                <h3 class="text-2xl font-bold mb-4 font-headline">President of the Student Council</h3>
+                                <p class="text-on-surface-variant leading-relaxed text-lg">
+                                    Leading student initiatives, fostering technical and cultural growth at Anand International College of Engineering. Orchestrating large-scale events and bridging communication between students and administration.
+                                </p>
+                            </div>
+                            <!-- Experience 2 -->
+                            <div class="relative pl-8 md:pl-20">
+                                <div class="absolute left-[-5px] md:left-6.5 top-2 w-3 h-3 rounded-full bg-primary-fixed-dim/40"></div>
+                                <span class="text-xs font-headline tracking-[0.2em] text-primary uppercase mb-2 block">Internship</span>
+                                <h3 class="text-2xl font-bold mb-4 font-headline">Admission Cell Intern</h3>
+                                <p class="text-on-surface-variant leading-relaxed text-lg">
+                                    Applying strategic marketing and outreach efforts to improve enrollment and student engagement. Developing data-driven strategies for candidate conversion and brand presence.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Showcase -->
+        <section class="py-32 bg-surface" id="projects">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-24">
+                    <h2 class="font-headline text-5xl font-bold mb-6">Engineered Solutions</h2>
+                    <p class="text-on-surface-variant max-w-2xl mx-auto">A selection of cross-disciplinary projects ranging from digital ecosystems to sustainable physical infrastructure.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="group bg-surface-container-low rounded-xl overflow-hidden hover:-translate-y-2 transition-all duration-500">
+                        <div class="h-64 overflow-hidden relative">
+                            <img alt="Tech hackathon workspace" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="futuristic digital interface on multiple screens in a dimly lit high-tech hacking environment with neon cyan accents" src="assets/images/sih.jpg"/>
+                            <div class="absolute top-4 right-4 bg-primary-container px-3 py-1 rounded text-[10px] font-bold text-on-primary-container uppercase tracking-widest">Digital</div>
+                        </div>
+                        <div class="p-8">
+                            <h4 class="font-headline text-xl font-bold mb-4">Smart India Hackathon (SIH) Finalist Project</h4>
+                            <p class="text-on-surface-variant text-sm leading-relaxed mb-6">
+                                A national-level digital solution designed to streamline complex governance challenges through real-time data processing and intuitive UI.
+                            </p>
+                            <div class="flex items-center gap-2">
+                                <span class="text-[10px] px-2 py-1 bg-surface-bright rounded text-on-surface-variant uppercase font-bold tracking-tighter">Python</span>
+                                <span class="text-[10px] px-2 py-1 bg-surface-bright rounded text-on-surface-variant uppercase font-bold tracking-tighter">API Integration</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="group bg-surface-container-low rounded-xl overflow-hidden hover:-translate-y-2 transition-all duration-500">
+                        <div class="h-64 overflow-hidden relative bg-white flex items-center justify-center p-4">
+                            <img alt="Eco-friendly construction materials" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700" data-alt="close-up of textured sustainable building blocks made from recycled materials in a modern architectural setting" src="assets/images/bricks.png"/>
+                            <div class="absolute top-4 right-4 bg-tertiary-container px-3 py-1 rounded text-[10px] font-bold text-on-tertiary-container uppercase tracking-widest">Environment</div>
+                        </div>
+                        <div class="p-8">
+                            <h4 class="font-headline text-xl font-bold mb-4">Waste-to-Bricks (Civil Engineering)</h4>
+                            <p class="text-on-surface-variant text-sm leading-relaxed mb-6">
+                                Sustainable engineering project focused on developing eco-friendly building materials from recycled waste, reducing environmental footprint in urban construction.
+                            </p>
+                            <div class="flex items-center gap-2">
+                                <span class="text-[10px] px-2 py-1 bg-surface-bright rounded text-on-surface-variant uppercase font-bold tracking-tighter">Sustainability</span>
+                                <span class="text-[10px] px-2 py-1 bg-surface-bright rounded text-on-surface-variant uppercase font-bold tracking-tighter">Material Science</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="group bg-surface-container-low rounded-xl overflow-hidden hover:-translate-y-2 transition-all duration-500">
+                        <div class="h-64 overflow-hidden relative">
+                            <img alt="Custom motor vehicle parts" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="detail shot of an exposed internal combustion engine with polished chrome and mechanical components in a high-contrast industrial garage" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5uHpYUI_pps82RBdwVMPwmhYp4lSNNnCLGaNso3fB-4J5stoixHVVt7ZRBvE_vNrWSDL6N3hdTnZHOz42yURPufxyAEGhLvz-YhJNarqhe4vN_3PlQYFHYoha7RqHV961tXRDhj60SrvfkpbF1oM5hhPzo-T_b_JaD0N5EpEVp41bUNal8NtmbQQ59KPXCxmakpxV63B4IW20lXTUqsMc-6pJ2UZMKo3C5sdpfPCwecd3IVqvxL0lcgS3b8PfqIwS-ZDh1bMAD3M"/>
+                            <div class="absolute top-4 right-4 bg-secondary-container px-3 py-1 rounded text-[10px] font-bold text-on-secondary-container uppercase tracking-widest">Mechanical</div>
+                        </div>
+                        <div class="p-8">
+                            <h4 class="font-headline text-xl font-bold mb-4">Custom Motor Vehicle Assembly</h4>
+                            <p class="text-on-surface-variant text-sm leading-relaxed mb-6">
+                                Hands-on mechanical engineering project involving end-to-end building and assembly of a functioning motor vehicle, focusing on chassis integrity and drive systems.
+                            </p>
+                            <div class="flex items-center gap-2">
+                                <span class="text-[10px] px-2 py-1 bg-surface-bright rounded text-on-surface-variant uppercase font-bold tracking-tighter">Fabrication</span>
+                                <span class="text-[10px] px-2 py-1 bg-surface-bright rounded text-on-surface-variant uppercase font-bold tracking-tighter">Automotive</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-32 relative overflow-hidden" id="contact">
+            <div class="absolute inset-0 bg-primary/5"></div>
+            <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+                <h2 class="font-headline text-4xl md:text-6xl font-bold mb-8">Let's Connect and Build Something <span class="text-gradient">Great!</span></h2>
+                <p class="text-on-surface-variant text-lg mb-12">I'm always open to discussing technical innovations, leadership opportunities, or cross-disciplinary engineering challenges.</p>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+                    
+                    <a class="btn-primary-gradient px-10 py-5 rounded-xl text-on-primary font-bold tracking-widest uppercase text-sm flex items-center gap-3 w-full md:w-auto justify-center group" href="mailto:singhrajeshwar915@gmail.com">
+                        <span class="material-symbols-outlined group-hover:rotate-12 transition-transform" data-icon="mail">mail</span> Email Me
+                    </a>
+                    
+                    <div class="flex gap-4">
+                        <a class="w-16 h-16 rounded-xl bg-surface-container-high flex items-center justify-center border border-outline-variant/20 hover:bg-surface-container-highest transition-all group shadow-xl" href="https://github.com/raoraj6" target="_blank" title="GitHub">
+                            <i class="fa-brands fa-github text-3xl text-primary group-hover:scale-110 transition-transform"></i>
+                        </a>
+                        <a class="w-16 h-16 rounded-xl bg-surface-container-high flex items-center justify-center border border-outline-variant/20 hover:bg-surface-container-highest transition-all group shadow-xl" href="https://www.linkedin.com/in/rajeshwar-singh-a44b65324?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" title="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in text-3xl text-primary group-hover:scale-110 transition-transform"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#1a1c1f] dark:bg-[#1a1c1f] w-full py-12 tonal-transition-from-surface">
+        <div class="flex flex-col md:flex-row justify-between items-center px-8 space-y-6 md:space-y-0 max-w-7xl mx-auto">
+            <div class="font-['Space_Grotesk'] text-lg font-black text-cyan-400">RAJESHWAR Singh</div>
+            <div class="flex flex-wrap justify-center gap-8 font-['Inter'] text-sm tracking-wide">
+                <a class="text-cyan-400 font-semibold transition-colors" href="#">Home</a>
+                <a class="text-slate-500 hover:text-cyan-300 transition-colors" href="#about">About</a>
+                <a class="text-slate-500 hover:text-cyan-300 transition-colors" href="#skills">Skills</a>
+                <a class="text-slate-500 hover:text-cyan-300 transition-colors" href="#projects">Projects</a>
+                <a class="text-slate-500 hover:text-cyan-300 transition-colors" href="#experience">Experience</a>
+                <a class="text-slate-500 hover:text-cyan-300 transition-colors" href="#contact">Contact</a>
+            </div>
+            <p class="text-slate-500 font-['Inter'] text-xs tracking-widest">© 2026 RAJESHWAR Singh | ENGINEERED PRECISION</p>
+        </div>
+    </footer>
+
+</body>
+</html>
